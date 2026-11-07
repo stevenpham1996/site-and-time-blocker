@@ -1,0 +1,19 @@
+#!/bin/sh
+# NetworkManager dispatcher hook for Domain Blocker
+# Placed in /etc/NetworkManager/dispatcher.d/99-domain-blocker
+# Automatically synchronizes domain blocker routing and firewall on interface/VPN changes
+
+INTERFACE="$1"
+ACTION="$2"
+
+case "$ACTION" in
+    up|vpn-up|connectivity-change)
+        if [ -x /usr/local/bin/domain-blocker ]; then
+            /usr/local/bin/domain-blocker sync >/dev/null 2>&1 &
+        fi
+        ;;
+    *)
+        ;;
+esac
+
+exit 0

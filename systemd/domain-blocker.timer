@@ -1,0 +1,11 @@
+[Unit]
+Description=Domain Blocker Periodic Schedule Check (every 2 minutes)
+After=network.target
+
+[Timer]
+OnBootSec=30s
+OnCalendar=*:0/2
+Persistent=true
+
+[Install]
+WantedBy=timers.target

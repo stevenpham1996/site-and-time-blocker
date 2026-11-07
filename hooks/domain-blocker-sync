@@ -1,0 +1,16 @@
+#!/bin/sh
+# Systemd sleep/suspend hook for Domain Blocker
+# Placed in /lib/systemd/system-sleep/domain-blocker-sync
+# Synchronizes block state immediately when system wakes up
+
+case "$1" in
+    post)
+        if [ -x /usr/local/bin/domain-blocker ]; then
+            /usr/local/bin/domain-blocker sync >/dev/null 2>&1 &
+        fi
+        ;;
+    *)
+        ;;
+esac
+
+exit 0

@@ -1,0 +1,14 @@
+[Unit]
+Description=Domain Blocker Schedule Sync
+After=network.target network-online.target systemd-resolved.service
+Wants=systemd-resolved.service
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/local/bin/domain-blocker sync
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

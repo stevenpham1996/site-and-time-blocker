@@ -1,0 +1,44 @@
+# Target Domains for Domain Blocker
+# Format: one domain per line. Lines starting with '#' are ignored.
+
+# --- YouTube & Media Endpoints ---
+youtube.com
+www.youtube.com
+m.youtube.com
+music.youtube.com
+gaming.youtube.com
+youtu.be
+youtube-nocookie.com
+www.youtube-nocookie.com
+youtube-ui.l.google.com
+ytimg.com
+i.ytimg.com
+s.ytimg.com
+yt3.ggpht.com
+googlevideo.com
+redirector.googlevideo.com
+
+# --- Reddit ---
+reddit.com
+www.reddit.com
+old.reddit.com
+new.reddit.com
+redd.it
+i.redd.it
+v.redd.it
+preview.redd.it
+redditstatic.com
+www.redditstatic.com
+redditmedia.com
+gateway.reddit.com
+oauth.reddit.com
+gql.reddit.com
+
+# --- Quora ---
+quora.com
+www.quora.com
+quoracdn.net
+qsf.fs.quoracdn.net
+
+# --- Anti-Bypass Canaries ---
+use-application-dns.net
